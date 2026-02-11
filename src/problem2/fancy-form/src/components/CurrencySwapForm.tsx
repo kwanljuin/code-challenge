@@ -129,12 +129,10 @@ export function CurrencySwapForm() {
 
   return (
     <Card className="w-full max-w-md md:max-w-4xl mx-auto overflow-hidden border-white/10 bg-neutral-900/90 backdrop-blur-2xl shadow-[0_0_50px_-12px_rgba(0,0,0,0.5)] transition-all hover:shadow-[0_0_60px_-12px_rgba(59,130,246,0.3)]">
-      <CardHeader className="space-y-1 pb-4">
-        <div className="flex justify-between items-center">
-          <CardTitle className="text-2xl font-bold bg-gradient-to-br from-white to-white/60 bg-clip-text text-transparent">
-            Swap
-          </CardTitle>
-        </div>
+      <CardHeader className="space-y-1 pb-4 text-center">
+        <CardTitle className="text-2xl font-bold bg-gradient-to-br from-white to-white/60 bg-clip-text text-transparent">
+          Swap
+        </CardTitle>
         <CardDescription className="text-white/40">
           Instant, secure token exchange
         </CardDescription>

@@ -4,11 +4,10 @@ import './App.css'
 
 function App() {
   return (
-    <div className="h-screen w-screen flex items-center justify-center bg-neutral-950 relative overflow-hidden">
+    <div className="min-h-screen w-screen flex items-center justify-center bg-neutral-950 relative py-12">
       {/* Background elements for extra "wow" */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[120px]" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/20 rounded-full blur-[120px]" />
-
+      <div className="absolute bottom-0 right-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[120px]" />
       <div className="relative z-10 w-full px-4 flex flex-col items-center">
         <header className="mb-12 text-center space-y-2">
           <h1 className="text-4xl sm:text-6xl font-black tracking-tighter text-white">
