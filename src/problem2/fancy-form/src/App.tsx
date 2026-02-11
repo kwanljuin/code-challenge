@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { CurrencySwapForm } from './components/CurrencySwapForm'
+import { Toaster } from './components/ui/sonner'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="h-screen w-screen flex items-center justify-center bg-neutral-950 relative overflow-hidden">
+      {/* Background elements for extra "wow" */}
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[120px]" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/20 rounded-full blur-[120px]" />
+
+      <div className="relative z-10 w-full px-4 flex flex-col items-center">
+        <header className="mb-12 text-center space-y-2">
+          <h1 className="text-4xl sm:text-6xl font-black tracking-tighter text-white">
+            Crypto<span className="text-blue-500">Swap</span>
+          </h1>
+          <p className="text-neutral-500 font-medium max-w-sm mx-auto">
+            Trade assets instantly with institutional-grade precision.
+          </p>
+        </header>
+
+        <CurrencySwapForm />
+
+        <footer className="mt-16 text-neutral-600 text-xs font-medium space-x-6">
+          <a href="#" className="hover:text-white text-blue-500">Terms</a>
+          <a href="#" className="hover:text-white text-blue-500">Privacy</a>
+          <a href="#" className="hover:text-white text-blue-500">Support</a>
+        </footer>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <Toaster position="bottom-right" theme="dark" closeButton richColors />
+    </div>
   )
 }
 
