@@ -21,9 +21,9 @@ function App() {
         <CurrencySwapForm />
 
         <footer className="mt-16 text-neutral-600 text-xs font-medium space-x-6">
-          <a href="#" className="hover:text-white text-blue-500">Terms</a>
-          <a href="#" className="hover:text-white text-blue-500">Privacy</a>
-          <a href="#" className="hover:text-white text-blue-500">Support</a>
+          <a href="#" className="hover:text-white text-blue-700">Terms</a>
+          <a href="#" className="hover:text-white text-blue-700">Privacy</a>
+          <a href="#" className="hover:text-white text-blue-700">Support</a>
         </footer>
       </div>
       <Toaster position="bottom-right" theme="dark" closeButton richColors />

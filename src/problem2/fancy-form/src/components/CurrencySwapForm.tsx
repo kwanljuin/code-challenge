@@ -144,18 +144,17 @@ export function CurrencySwapForm() {
             <div className="flex-1 relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl blur opacity-0 group-focus-within:opacity-20 transition duration-500"></div>
               <div className="relative p-5 rounded-xl bg-white/5 border border-white/10 space-y-2">
-                <div className="flex justify-between text-xs font-medium text-white/40">
+                <div className="flex text-xs font-medium text-white/40">
                   <Label htmlFor="fromAmount" className="text-white">You Pay</Label>
-                  <span className="text-white/60">Balance: --</span>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
                   <div className="flex-1">
                     <Input
                       id="fromAmount"
                       type="number"
                       placeholder="0.00"
                       {...register("fromAmount")}
-                      className="border-none bg-transparent text-3xl font-bold h-auto p-0 focus-visible:ring-0 placeholder:text-white/20 tabular-nums text-white"
+                      className="border-none bg-transparent text-xl font-bold h-12 p-0 focus-visible:ring-0 placeholder:text-white/20 tabular-nums text-white"
                     />
                     {errors.fromAmount && (
                       <p className="text-[10px] text-destructive mt-1">
@@ -167,11 +166,11 @@ export function CurrencySwapForm() {
                     value={fromCurrency}
                     onValueChange={(value) => setValue("fromCurrency", value)}
                   >
-                    <SelectTrigger className="w-full sm:w-[140px] h-12 bg-white/5 border-white/10 hover:bg-white/10 transition-colors rounded-xl text-white">
+                    <SelectTrigger className="w-full sm:w-[160px] h-12 bg-white/5 border-white/10 hover:bg-white/10 transition-colors rounded-xl text-white">
                       <SelectValue>
                         <div className="flex items-center gap-2">
                           <TokenIcon symbol={fromCurrency} />
-                          <span className="font-bold text-base text-white">{fromCurrency}</span>
+                          <span className="font-bold text-sm text-white">{fromCurrency}</span>
                         </div>
                       </SelectValue>
                     </SelectTrigger>
@@ -215,23 +214,23 @@ export function CurrencySwapForm() {
                     </span>
                   )}
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
                   <div className="flex-1">
                     <Input
                       readOnly
                       value={toAmount}
-                      className="border-none bg-transparent text-3xl font-bold h-auto p-0 focus-visible:ring-0 cursor-default tabular-nums text-white"
+                      className="border-none bg-transparent text-xl font-bold h-12 p-0 focus-visible:ring-0 cursor-default tabular-nums text-white"
                     />
                   </div>
                   <Select
                     value={toCurrency}
                     onValueChange={(value) => setValue("toCurrency", value)}
                   >
-                    <SelectTrigger className="w-full sm:w-[140px] h-12 bg-white/5 border-white/10 hover:bg-white/10 transition-colors rounded-xl text-white">
+                    <SelectTrigger className="w-full sm:w-[160px] h-12 bg-white/5 border-white/10 hover:bg-white/10 transition-colors rounded-xl text-white">
                       <SelectValue>
                         <div className="flex items-center gap-2">
                           <TokenIcon symbol={toCurrency} />
-                          <span className="font-bold text-base text-white">{toCurrency}</span>
+                          <span className="font-bold text-sm text-white">{toCurrency}</span>
                         </div>
                       </SelectValue>
                     </SelectTrigger>
